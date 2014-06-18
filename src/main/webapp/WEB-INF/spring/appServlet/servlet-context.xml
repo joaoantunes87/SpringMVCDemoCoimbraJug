@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="pt.coimbrajug.springmvcdemo" />
+	<context:component-scan base-package="pt.coimbrajug.springmvcdemo.controllers" />
 	
 	
 	

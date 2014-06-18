@@ -1,7 +1,8 @@
-package pt.coimbrajug.springmvcdemo;
+package pt.coimbrajug.springmvcdemo.controllers;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import pt.coimbrajug.springmvcdemo.models.ToDo;
 
 /**
  * Handles requests for the application home page.
@@ -32,6 +35,19 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
+		ToDo task = new ToDo();
+		task.setDescription("taks1");
+		task.setAssigneeName("joao");
+		task.save();
+		
+		ToDo task2 = new ToDo();
+		task2.setDescription("task2");
+		task2.setAssigneeName("joana");
+		task2.save();
+		
+		List<ToDo> tasks = ToDo.fetchAll();
+		
+		model.addAttribute("tasks", tasks);
 		
 		return "home";
 	}
