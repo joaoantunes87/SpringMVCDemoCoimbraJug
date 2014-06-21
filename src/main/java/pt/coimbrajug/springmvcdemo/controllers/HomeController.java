@@ -34,21 +34,7 @@ public class HomeController {
 		
 		String formattedDate = dateFormat.format(date);
 		
-		model.addAttribute("serverTime", formattedDate );
-		ToDo task = new ToDo();
-		task.setDescription("taks1");
-		task.setAssigneeName("joao");
-		task.save();
-		
-		ToDo task2 = new ToDo();
-		task2.setDescription("task2");
-		task2.setAssigneeName("joana");
-		task2.save();
-		
-		List<ToDo> tasks = ToDo.fetchAll();
-		
-		model.addAttribute("tasks", tasks);
-		
+		model.addAttribute("serverTime", formattedDate );			
 		return "home";
 	}
 	

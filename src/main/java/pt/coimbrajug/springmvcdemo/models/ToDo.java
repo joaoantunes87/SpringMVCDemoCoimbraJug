@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.core.task.TaskExecutor;
+
 public class ToDo {
 
 	private static int incrementalId = 0;
@@ -36,7 +38,12 @@ public class ToDo {
 	public ToDo fetch() {
 
 		if (this.id != null) {
-			return tasks.get(this.id);
+			ToDo task = tasks.get(this.id);
+			if ( task != null) {
+				this.setAssigneeName(task.getAssigneeName());
+				this.setDescription(task.getDescription());
+				return this;
+			}
 		}
 
 		return null;
