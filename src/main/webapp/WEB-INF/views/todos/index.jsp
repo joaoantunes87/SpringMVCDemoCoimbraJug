@@ -13,7 +13,7 @@
 	</c:if>
 	<ul>
 		<c:forEach items="${tasks}" var="task">
-			<li>${task.description}- ${task.assigneeName}</li>
+			<li><a href="/todos/${task.id}">${task.description}</a> - ${task.assigneeName}</li>
 		</c:forEach>
 	</ul>
 	
