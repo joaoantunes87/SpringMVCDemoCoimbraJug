@@ -1,11 +1,10 @@
 package pt.coimbrajug.springmvcdemo.models;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.springframework.core.task.TaskExecutor;
 
 public class ToDo {
 
@@ -31,7 +30,18 @@ public class ToDo {
 	}
 
 	// ActiveRecord Operations
-	public static List<ToDo> fetchAll() {
+	public static List<ToDo> fetchAll(String description) {
+		Collection<ToDo> tasksCollection = tasks.values();
+		if ( description != null && !description.isEmpty()) {
+			List<ToDo> filteredTasks = new ArrayList<ToDo>(0);
+			for (ToDo task : tasksCollection) {
+				if ( task.getDescription().contains(description)) {
+					filteredTasks.add(task);
+				}
+			}
+			return filteredTasks;
+			
+		}
 		return new ArrayList<ToDo>(tasks.values());
 	}
 
@@ -83,6 +93,7 @@ public class ToDo {
 		if (this.getId() != null) {
 			if (tasks.containsKey(this.getId())) {
 				tasks.remove(this.getId());
+				return true;
 			}
 		}
 		

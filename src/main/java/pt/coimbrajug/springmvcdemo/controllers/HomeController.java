@@ -2,7 +2,6 @@ package pt.coimbrajug.springmvcdemo.controllers;
 
 import java.text.DateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -11,8 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import pt.coimbrajug.springmvcdemo.models.ToDo;
 
 /**
  * Handles requests for the application home page.
