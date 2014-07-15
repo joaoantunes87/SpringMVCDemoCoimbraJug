@@ -8,7 +8,7 @@
 <body>
 	<h1>Tasks</h1>
 
-	<c:if test="${fn:length(companies) eq 0}">
+	<c:if test="${fn:length(tasks) eq 0}">
    		<p>No Tasks<p>
 	</c:if>
 	<ul>

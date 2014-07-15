@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * Class that represents the Resource ToDo
- * This class follows the pattern ActiveRecord. In this case the sake of the demo the
+ * This class follows the pattern ActiveRecord. In this case the for simplicity's sake,
  * data will be stored in memory and not in a Database
  */
 public class ToDo {
@@ -49,7 +49,7 @@ public class ToDo {
 	}
 
 	/**
-	 * Generate id.
+	 * Generate next id -- simulate a sequence
 	 *
 	 * @return the int
 	 */
@@ -60,7 +60,7 @@ public class ToDo {
 	/** ActiveRecord Operations **/
 	
 	/**
-	 * Fetch all.
+	 * Fetch all Tasks.
 	 *
 	 * @param description the description
 	 * @return the list
@@ -81,7 +81,7 @@ public class ToDo {
 	}
 
 	/**
-	 * Fetch.
+	 * Fill the ToDo.this with the data fetch from memory
 	 *
 	 * @return the to do
 	 */
@@ -101,7 +101,7 @@ public class ToDo {
 	}
 
 	/**
-	 * Save.
+	 * Save the Task. If the Task already exists update if not create a new one
 	 *
 	 * @return true, if successful
 	 */
@@ -134,7 +134,7 @@ public class ToDo {
 	}
 	
 	/**
-	 * Delete.
+	 * Delete the Taks with this.id
 	 *
 	 * @return true, if successful
 	 */
