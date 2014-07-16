@@ -4,7 +4,7 @@ This repository is the code produced for a simple Demo how to build a Website an
 
 <h3>Features</h3>
 
-<h5>This website will have only to pages:</h5>
+<h5>This website will have only two pages:</h5>
 <ul>
   <li>Root Page - Where all tasks are shown and a form for creating new ones</li>
   <li>Task Page - Page where the details of a specific task are shown</li>
