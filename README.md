@@ -1,6 +1,8 @@
 <h1>Spring MVC Demo CoimbraJug</h1>
 
-This repository is the code produced for a simple Demo how to build a Website and Rest Api using the Spring MVC Frameworks.
+This repository is the code produced for a simple Demo: how to build a Website and Rest Api using the Spring MVC Frameworks.
+
+This demo was used on this <a href="http://www.meetup.com/Coimbra-JUG/events/189249522/">meetup</a> using this <a href="https://docs.google.com/presentation/d/1dLuKEGcO7WG-FTvXnb3qpIyuzb2trENkBXrvzNTUqKA/pub?start=false&loop=false&delayms=3000&slide=id.g351dc2625_0190">presentation</a>.
 
 <h3>Features</h3>
 
